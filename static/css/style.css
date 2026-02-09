@@ -138,6 +138,19 @@ header {
     align-items: center;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Comments */
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 /* Utilities */
 .hidden {
     display: none !important;

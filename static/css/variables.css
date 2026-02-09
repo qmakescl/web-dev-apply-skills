@@ -1,0 +1,53 @@
+:root {
+    /* Colors */
+    --color-primary: #3b82f6;
+    --color-primary-hover: #2563eb;
+    --color-background: #ffffff;
+    --color-surface: #f8fafc;
+    --color-text: #0f172a;
+    --color-text-muted: #64748b;
+    --color-border: #e2e8f0;
+    --color-error: #ef4444;
+    --color-success: #22c55e;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+
+    /* Fluid Typography (Utopia.fyi) */
+    /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --step--2: clamp(0.6944rem, 0.6865rem + 0.0397vw, 0.72rem);
+    --step--1: clamp(0.8333rem, 0.8145rem + 0.0943vw, 0.9rem);
+    --step-0: clamp(1rem, 0.966rem + 0.1702vw, 1.125rem);
+    --step-1: clamp(1.2rem, 1.1449rem + 0.2754vw, 1.4063rem);
+    --step-2: clamp(1.44rem, 1.3551rem + 0.4243vw, 1.7578rem);
+    --step-3: clamp(1.728rem, 1.6015rem + 0.6326vw, 2.1973rem);
+    --step-4: clamp(2.0736rem, 1.8893rem + 0.9213vw, 2.7466rem);
+    --step-5: clamp(2.4883rem, 2.2245rem + 1.319vw, 3.4332rem);
+
+    /* Fluid Spacing */
+    /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --space-3xs: clamp(0.25rem, 0.233rem + 0.0851vw, 0.3125rem);
+    --space-2xs: clamp(0.5rem, 0.466rem + 0.1702vw, 0.625rem);
+    --space-xs: clamp(0.75rem, 0.6989rem + 0.2553vw, 0.9375rem);
+    --space-s: clamp(1rem, 0.9319rem + 0.3404vw, 1.25rem);
+    --space-m: clamp(1.5rem, 1.3979rem + 0.5106vw, 1.875rem);
+    --space-l: clamp(2rem, 1.8638rem + 0.6809vw, 2.5rem);
+    --space-xl: clamp(3rem, 2.7957rem + 1.0213vw, 3.75rem);
+    --space-2xl: clamp(4rem, 3.7277rem + 1.3617vw, 5rem);
+    --space-3xl: clamp(6rem, 5.5915rem + 2.0426vw, 7.5rem);
+
+    /* One-up pairs */
+    --space-s-m: clamp(1rem, 0.7617rem + 1.1915vw, 1.875rem);
+    --space-m-l: clamp(1.5rem, 1.2277rem + 1.3617vw, 2.5rem);
+    --space-l-xl: clamp(2rem, 1.5234rem + 2.383vw, 3.75rem);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #0f172a;
+        --color-surface: #1e293b;
+        --color-text: #f8fafc;
+        --color-text-muted: #94a3b8;
+        --color-border: #334155;
+    }
+}

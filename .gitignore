@@ -1,0 +1,12 @@
+.agent/
+.agents/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+uploads/
+.DS_Store
+.env

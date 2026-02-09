@@ -1,0 +1,21 @@
+- [x] Python 가상환경 생성 및 활성화 (`.venv`) <!-- id: 0 -->
+- [x] **Implementation Plan 수립 및 승인** <!-- id: 1 -->
+    - [x] PRD 분석 및 기술 스택 확정 <!-- id: 2 -->
+    - [x] `implementation_plan.md` 작성 (Web Guidelines & Responsive Design 적용) <!-- id: 3 -->
+- [x] **프로젝트 초기 설정 (Foundation)** <!-- id: 4 -->
+    - [x] `pyproject.toml` 작성 및 의존성 설치 (`fastapi`, `uvicorn`, `jinja2`, `python-multipart`, `bcrypt`, `pyjwt`) <!-- id: 5 -->
+    - [x] 디렉토리 구조 생성 (`static/`, `templates/`, `uploads/`, `db/`) <!-- id: 6 -->
+    - [x] DB 스키마 생성 (`sqlite3` 및 초기화 스크립트 작성) <!-- id: 7 -->
+- [x] **Backend 개발 (API)** <!-- id: 8 -->
+    - [x] Auth API 구현 (`POST /register`, `POST /login`, JWT/Session) <!-- id: 9 -->
+    - [x] Posts API 구현 (`POST`, `GET`, `PUT`, `DELETE`) <!-- id: 10 -->
+    - [x] 이미지 업로드 처리 로직 구현 <!-- id: 11 -->
+- [x] **Frontend 개발 (UI/UX)** <!-- id: 12 -->
+    - [x] 공통 CSS 설정 (Variables, Fluid Typography, Reset) <!-- id: 13 -->
+    - [x] 회원가입/로그인 페이지 구현 (유효성 검사, 포커스 상태) <!-- id: 14 -->
+    - [x] 메인 피드 페이지 레이아웃 (Mobile-first, Grid/Flex) <!-- id: 15 -->
+    - [x] 게시물 작성/수정/삭제 기능 연동 <!-- id: 16 -->
+- [x] **통합 및 테스트 (Verification)** <!-- id: 17 -->
+    - [x] 전체 기능 흐름 테스트 (User Journey) <!-- id: 18 -->
+    - [x] 반응형 동작 확인 (Mobile vs Desktop) <!-- id: 19 -->
+    - [x] Web Guidelines 준수 확인 (접근성, 에러 처리) <!-- id: 20 -->

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block header_extra %}
+<!-- 글쓰기 버튼이나 사용자 프로필 등을 헤더에 추가할 수 있음 -->
+{% endblock %}
+
+{% block content %}
+<div id="auth-section" class="hidden">
+    <!-- 로그인한 사용자에게만 보이는 글쓰기 영역 -->
+    <section class="card" style="margin-bottom: var(--space-l); padding: var(--space-m);">
+        <h2 class="text-step-1" style="margin-bottom: var(--space-s);">새 게시물 작성</h2>
+        <form id="post-form">
+            <div class="form-group">
+                <textarea id="post-content" class="form-input" rows="3" placeholder="오늘 무슨 일이 있었나요?"
+                    required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="post-image" class="form-label">사진 업로드</label>
+                <input type="file" id="post-image" accept="image/*" required>
+            </div>
+            <div style="display: flex; justify-content: flex-end;">
+                <button type="submit" class="btn">게시하기</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+<div id="guest-section" class="hidden" style="text-align: center; margin-bottom: var(--space-l);">
+    <h2 class="text-step-2">환영합니다!</h2>
+    <p class="text-step-0" style="margin-bottom: var(--space-m);">로그인하여 친구들의 소식을 확인하세요.</p>
+    <a href="/login" class="btn">로그인 하러 가기</a>
+</div>
+
+<!-- 피드 영역 -->
+<section id="feed-container" class="post-grid">
+    <!-- 게시물 카드가 여기에 동적으로 추가됩니다 -->
+    <div style="grid-column: 1 / -1; text-align: center; color: var(--color-text-muted);">
+        게시물을 불러오는 중...
+    </div>
+</section>
+
+<!-- 게시물 템플릿 (Hidden) -->
+<template id="post-template">
+    <article class="card post-card">
+        <img src="" alt="Post Image" class="post-image" loading="lazy">
+        <div class="post-content">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-2xs);">
+                <strong class="post-author"></strong>
+                <span class="post-date text-step--2" style="color: var(--color-text-muted);"></span>
+            </div>
+            <p class="post-text"></p>
+        </div>
+        <div class="post-actions">
+            <button class="btn-like" style="background: none; border: none; cursor: pointer; color: var(--color-text);">
+                ❤️ <span class="like-count">0</span>
+            </button>
+            <button class="btn-comment"
+                style="background: none; border: none; cursor: pointer; color: var(--color-text);">
+                💬 <span class="comment-count">0</span>
+            </button>
+            <div style="flex-grow: 1;"></div>
+            <button class="btn-delete hidden"
+                style="background: none; border: none; cursor: pointer; color: var(--color-error);">🗑️</button>
+        </div>
+        <div class="post-comments hidden"
+            style="padding: var(--space-s); background-color: var(--color-surface); border-top: 1px solid var(--color-border);">
+            <ul class="comment-list" style="margin-bottom: var(--space-s);"></ul>
+            <form class="comment-form" style="display: flex; gap: var(--space-2xs);">
+                <input type="text" class="form-input comment-input" placeholder="댓글 달기..." required
+                    style="min-height: 36px;">
+                <button type="submit" class="btn" style="min-height: 36px; padding: 0 var(--space-s);">게시</button>
+            </form>
+        </div>
+    </article>
+</template>
+{% endblock %}
